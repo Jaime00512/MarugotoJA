@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marugoto Web</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!-- sonido de fondo -->
+	<audio id="myAudio" preload="auto">
+		<source src="audio/Rock Mafia ft Miley Cyrus - The Big Bang (lyrics).mp3" type="audio/mp3">
+	</audio>
+	<!-- Controles de audio -->
+	<div class="audio-controls">
+		<button onclick="toggleAudio()">Reproducir/Pausar</button>
+    <button onclick="muteAudio()">Silenciar</button>
+  </div>
+  <!-- Encabezado -->
+   <header class="header">
+      <h1>Más allá de un Nombre</h1>
+      <p>Cosas Sobre Mi</p>
+   </header>
+   <!--Menu de Navegación-->
+   <nav class="navbar">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+   </nav> 
+   <!--Seccion Inicio-->
+    <section id="inicio" class="inicio">
+        <h2>Bienvenidos a mi página</h2>
+        <p>cosas que poner.</p>
+
+    </section>
+    <!--Seccion Hobbies-->
+    <section id="hobbies" class="hobbies">
+        <h2>Mis hobbies son:...</h2>
+        <div class="">
+
+        </div>
+    </section> 
+    <!--Seccion Contacto -->
+     <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+     </section>
+      <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Marugoto. Pagina creada por Jaime Alburquerque.</p>
+    <ul>
+      <li><a href="https://steamcommunity.com/profiles/76561198876584910/">Steam</a></li>
+      <li><a href="https://www.roblox.com/es/users/641761403/profile">roblox</a></li>
+      <li><a href="https://www.instagram.com/jaimee__.12/">Instagram</a></li>
+      <li><a href="https://x.com/KogaLost">X</a></li>
+    </ul>
+  </footer>
+ <script>
+    var audio = document.getElementById("myAudio");
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play().catch(function(error) {
+                console.error("Error al intentar reproducir el audio: ", error);
+            });
+        } else {
+            audio.pause();
+        }
+    }
+
+    function muteAudio() {
+        audio.muted = !audio.muted;
+    }
+ </script>
+
+</body>
+</html>
