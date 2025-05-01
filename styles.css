@@ -10,37 +10,22 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
-  color: #333;
+  color: #f0f0f0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.audio-controls {
-margin-top: 20px;
-text-align: center;
-}
-
-.audio-controls button {
-background-color: #4CAF50;
-color: white;
-padding: 10px 20px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-margin: 5px;
-}
-
-.audio-controls button:hover {
-background-color: #45a049;
-}
 
 /* Estilo del header */
 .header {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-color: rgba(40, 20, 60, 0.6); /* fondo oscuro con tono morado y transparencia */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   color: white;
   text-align: center;
   padding: 4rem 2rem;
 }
+
 
 .header h1 {
   font-size: 3rem;
@@ -52,9 +37,11 @@ background-color: #45a049;
   font-weight: 300;
 }
 
-/* Navegación */
+/* Barrra de nevegacion */ 
 .navbar {
-  background: #333;
+  background-color: rgba(30, 10, 50, 0.5); /* tono púrpura oscuro con transparencia */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .navbar ul {
@@ -74,7 +61,7 @@ background-color: #45a049;
 }
 
 .navbar a:hover {
-  color: #ffd700;
+  color: #667eea;
 }
 
 /* Secciones */
@@ -106,21 +93,40 @@ section {
 /* Ejemplo de tarjetas para hobbies */
 .hobbies div::before, .hobbies div::after {
   content: "Agrega aquí tus hobbies";
-  background: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Sección Contacto */
-.contacto {
-  background: #f0f0f0;
-  border-top: 2px solid #ccc;
+/* Estilo para los enlaces de contacto */
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Los elementos estarán apilados verticalmente */
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact-links li {
+  margin-bottom: 10px; /* Espacio entre los elementos */
+}
+
+.contact-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
+  color: #ffd700;
 }
 
 /* Footer */
 .footer {
-  background: #333;
+  background-color: rgba(40, 20, 60, 0.6); /* igual que el header */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
@@ -149,9 +155,42 @@ section {
   color: white;
 }
 
+.audio-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10; /* para asegurarte que no se tapen con otros elementos */
+  text-align: center;
+}
+
+.audio-controls button {
+  background-color: #764ba2; /* Morado oscuro */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.audio-controls button:hover {
+  background-color: #667eea; /* Azul suave */
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
   }
+}
+/* Video de fondo */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -1;
+  object-fit: cover;
 }
