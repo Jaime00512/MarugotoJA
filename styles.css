@@ -70,8 +70,8 @@ section {
   text-align: center;
 }
 
-/* Inicio, Hobbies y Contacto */
-.inicio h2, .hobbies h2, .contacto h2 {
+/* Inicio y Contacto */
+.inicio h2, .contacto h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -82,21 +82,62 @@ section {
   margin: 0 auto;
 }
 
-/* Hobbies con Grid */
-.hobbies div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+/* Estilo para centrar el título */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-/* Ejemplo de tarjetas para hobbies */
-.hobbies div::before, .hobbies div::after {
-  content: "Agrega aquí tus hobbies";
-  padding: 2rem;
+.hobbies-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hobbies-card {
+  border: 2px solid #ddd;
   border-radius: 10px;
+  padding: 15px;
+  width: 300px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+/* Efecto de hover para las tarjetas */
+.hobby-card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo de los hobbies dentro de las tarjetas */
+.hobby {
+  background-color: rgba(40, 20, 60, 0.6);
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+/* Efecto hover para los hobbies */
+.hobby:hover {
+  background-color: #667eea;
+}
+.hobby-description {
+  margin-top: 10px;
+  font-weight: normal;
+  display: none; /* Oculto por defecto */
+}
+/* Clase activa para mostrar */
+.hobby.active .hobby-description {
+  max-height: 100px; /* suficiente espacio para mostrar el texto */
+}
+
+
 
 /* Estilo para los enlaces de contacto */
 .contact-links {
