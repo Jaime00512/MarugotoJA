@@ -125,7 +125,7 @@ section {
 
 /* Efecto hover para los hobbies */
 .hobby:hover {
-  background-color: #667eea;
+  background-color: rgba(40, 20, 60, 0.6);
 }
 .hobby-description {
   margin-top: 10px;
