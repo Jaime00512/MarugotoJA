@@ -101,7 +101,7 @@ section {
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 15px;
-  width: 300px;
+  width: 720px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 /* Efecto de hover para las tarjetas */
@@ -137,6 +137,15 @@ section {
   max-height: 100px; /* suficiente espacio para mostrar el texto */
 }
 
+/* playlist spotify */
+.playlist-container {
+  margin-top: 40px;
+  text-align: center;
+}
+.playlist-container h2 {
+  margin-bottom: 20px;
+  color: #ddd; /* verde de Spotify */
+}
 
 
 /* Estilo para los enlaces de contacto */
